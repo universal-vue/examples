@@ -6,16 +6,25 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
+    "ssr:build": "vue-cli-service ssr:build",
+    "ssr:fix": "vue-cli-service ssr:fix",
+    "ssr:serve": "vue-cli-service ssr:serve",
+    "ssr:start": "vue-cli-service ssr:start",
+    "ssr:static": "vue-cli-service ssr:static",
     "test:e2e": "vue-cli-service test:e2e"
   },
   "dependencies": {
+    "@uvue/core": "^0.1.0-alpha",
+    "@uvue/server": "^0.1.0-alpha",
     "register-service-worker": "^1.0.0",
     "vue": "^2.5.17",
+    "vue-meta": "^1.5.5",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
     "@cypress/webpack-preprocessor": "^3.0.0",
+    "@uvue/vue-cli-plugin-ssr": "^0.1.0-alpha.1",
     "@vue/cli-plugin-babel": "^3.1.1",
     "@vue/cli-plugin-e2e-cypress": "^3.1.1",
     "@vue/cli-plugin-eslint": "^3.1.1",
