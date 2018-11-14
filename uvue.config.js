@@ -4,10 +4,10 @@ export default {
     [
       '@uvue/core/plugins/vuex',
       {
-        onHttpRequest: true
-      }
+        onHttpRequest: true,
+      },
     ],
     '@uvue/core/plugins/middlewares',
-    '@uvue/core/plugins/errorHandler'
-  ]
-}
+    '@uvue/core/plugins/errorHandler',
+  ],
+};
