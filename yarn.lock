@@ -9590,6 +9590,16 @@ vue-meta@^1.5.5:
     lodash.isplainobject "^4.0.6"
     object-assign "^4.1.1"
 
+vue-no-ssr@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/vue-no-ssr/-/vue-no-ssr-1.0.0.tgz#169bdabfa2ca170c8979d94062d877a0479c3f10"
+  integrity sha512-+/GTO3i0Rqs4uHuYPu9qqn3UPzxKgk/Ji7uKzK+vMD9chfBYKZbddmI1ueKOKFYxfyS+ZpZhOC+qRTCK4ORoDg==
+
+vue-progressbar@^0.7.5:
+  version "0.7.5"
+  resolved "https://registry.yarnpkg.com/vue-progressbar/-/vue-progressbar-0.7.5.tgz#414730892252b1e45582d4979dec93038e007f79"
+  integrity sha512-VeNG/inMsFbvdCTS7lJ1gjDAKSUZdqkhW9gS1tb0we1rqFKxR+BCEiVUgw5C84vODKb14M2GWHTw0WVdpoVg6g==
+
 vue-router@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.0.1.tgz#d9b05ad9c7420ba0f626d6500d693e60092cc1e9"

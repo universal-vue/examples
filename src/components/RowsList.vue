@@ -48,9 +48,6 @@ export default {
         margin: 1rem 0 3rem 0;
       }
     }
-
-    p {
-    }
   }
 }
 </style>

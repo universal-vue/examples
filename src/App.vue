@@ -1,17 +1,19 @@
 <template>
   <div id="app">
-    <MainMenu />
+    <NoSSR> <vue-progress-bar></vue-progress-bar> </NoSSR> <MainMenu />
     <router-view v-if="!$errorHandler.error" />
     <ErrorPage v-else />
   </div>
 </template>
 
 <script>
+import NoSSR from 'vue-no-ssr';
 import MainMenu from './components/MainMenu.vue';
 import ErrorPage from './components/ErrorPage.vue';
 
 export default {
   components: {
+    NoSSR,
     MainMenu,
     ErrorPage,
   },
