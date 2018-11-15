@@ -31,16 +31,21 @@ export const pageEnterEffect = {
 
 export const pageLeaveEffect = {
   beforeRouteLeave(to, from, next) {
-    anime({
-      targets: this.$el,
-      translateY: [0, '10rem'],
-      opacity: [1, 0],
-      duration: 300,
-      easing: 'easeInQuad',
-      complete() {
-        next();
-      },
-    });
+    if (!this.left) {
+      this.left = true;
+      anime({
+        targets: this.$el,
+        translateY: [0, '10rem'],
+        opacity: [1, 0],
+        duration: 300,
+        easing: 'easeInQuad',
+        complete() {
+          next();
+        },
+      });
+    } else {
+      next();
+    }
   },
 };
 
