@@ -29,6 +29,11 @@ body {
   padding: 3rem;
   box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
 
+  img {
+    max-height: 6rem;
+    margin-top: -2rem;
+  }
+
   ul {
     list-style: none;
     list-style-image: none;
@@ -53,7 +58,8 @@ body {
         padding: 0.5rem 1rem;
         margin: 0.5rem;
 
-        transition: color 0.2s ease-out;
+        transition: all 0.2s ease-out;
+        transition-property: color, opacity;
 
         &::after {
           content: '';
@@ -67,10 +73,17 @@ body {
           transition: transform 0.2s ease-out;
         }
 
-        &:hover,
-        a:focus,
-        &:active,
-        &.router-link-exact-active {
+        &.logo-hover:hover,
+        a.logo-hover:focus,
+        &.logo-hover:active {
+          opacity: 0.8;
+        }
+
+        &:hover:not(.logo-hover),
+        a:focus:not(.logo-hover),
+        &:active:not(.logo-hover),
+        &.router-link-exact-active,
+        &.router-link-active {
           color: #444;
 
           &::after {

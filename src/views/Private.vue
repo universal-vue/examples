@@ -1,6 +1,6 @@
 <template>
-  <PageLayout title="Async data">
-    <p>This page show data loaded via <code>asyncData()</code> on current page component</p>
+  <PageLayout title="Private">
+    <p>This page show data with a private access: you need to be logged.</p>
 
     <RowsList :rows="rows" />
   </PageLayout>
@@ -16,8 +16,16 @@ export default {
     RowsList,
   },
 
+  middlewares: [
+    async ({ store, redirect }) => {
+      if (!store.state.user.logged) {
+        redirect('/profile?from=/private');
+      }
+    },
+  ],
+
   async asyncData({ http }) {
-    const { data: rows } = await http.get('/api/public');
+    const { data: rows } = await http.get('/api/private');
     return {
       rows,
     };

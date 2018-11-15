@@ -2,19 +2,18 @@
   <PageLayout title="Vuex">
     <p>This page show data loaded via <code>fetch()</code> on current page component</p>
 
-    <div v-for="(row, index) in rows" :key="index">
-      <h2>{{ row.title }}</h2>
-      <p>{{ row.text }}</p>
-    </div>
+    <RowsList :rows="rows" />
   </PageLayout>
 </template>
 
 <script>
 import PageLayout from '@/components/PageLayout';
+import RowsList from '@/components/RowsList';
 
 export default {
   components: {
     PageLayout,
+    RowsList,
   },
 
   computed: {

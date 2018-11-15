@@ -12,9 +12,15 @@
       Welcome to the UVue demo website! The purpose of this website is to show some features of this
       Vue package. UVue is a Vue CLI plugin to build server side rendered applications easly.
       <div class="links">
-        <a href="https://github.com/universal-vue/examples" target="_blank"> Source code </a>
-        <a href="https://universal-vue.github.io/docs" target="_blank"> Documentation </a>
-        <a href="https://github.com/universal-vue/uvue" target="_blank"> Github repo </a>
+        <a class="btn" href="https://github.com/universal-vue/examples" target="_blank">
+          Source code
+        </a>
+        <a class="btn" href="https://universal-vue.github.io/docs" target="_blank">
+          Documentation
+        </a>
+        <a class="btn" href="https://github.com/universal-vue/uvue" target="_blank">
+          Github repo
+        </a>
       </div>
     </div>
   </div>
@@ -48,29 +54,6 @@
       padding-top: 6rem;
       display: flex;
       justify-content: center;
-
-      a {
-        display: block;
-        text-decoration: none;
-
-        background: #00ab6c;
-        color: #fff;
-        padding: 1rem 2rem;
-        margin: 1rem;
-        border-radius: 0.7rem;
-
-        border-bottom: 0.3rem solid darken(#00ab6c, 10%);
-
-        transition: background-color 0.2s ease-in-out;
-        transition-property: background-color, border-color;
-
-        &:hover,
-        &:focus,
-        &:active {
-          background: darken(#00ab6c, 5%);
-          border-bottom-color: darken(#00ab6c, 15%);
-        }
-      }
     }
   }
 }

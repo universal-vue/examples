@@ -40,6 +40,12 @@ body {
   color: #666;
 }
 
+button,
+input {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.7rem;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -54,5 +60,42 @@ h2 {
   font-size: 2.4rem;
   font-weight: 300;
   margin: 0;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+
+  background: #00ab6c;
+  color: #fff;
+  padding: 1rem 2rem;
+  margin: 1rem;
+  border-radius: 0.7rem;
+
+  border: 0;
+  cursor: pointer;
+  border-bottom: 0.3rem solid darken(#00ab6c, 10%);
+
+  transition: background-color 0.2s ease-in-out;
+  transition-property: background-color, border-color;
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+    background: darken(#00ab6c, 5%);
+    border-bottom-color: darken(#00ab6c, 15%);
+  }
+}
+
+.notif {
+  padding: 2rem 2rem;
+  margin-bottom: 1rem;
+  background: lighten(#38465e, 60%);
+  border-radius: 2rem;
+
+  &.error {
+    background: lighten(#c4382c, 40%);
+  }
 }
 </style>

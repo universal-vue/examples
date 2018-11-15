@@ -33,7 +33,7 @@ export default {
       border-radius: 4px;
       width: 10rem;
 
-      margin: 1rem 0;
+      margin: 1rem 0 3rem 0;
     }
   }
 }
