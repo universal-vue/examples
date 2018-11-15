@@ -1,0 +1,6 @@
+{
+  "name": "uvue-examples",
+  "restart": "always",
+  "domain": "uvue.yabab.net",
+  "project": "uvue"
+}
