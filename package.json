@@ -19,6 +19,7 @@
     "animejs": "^2.2.0",
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
+    "faker": "^4.1.0",
     "js-cookie": "^2.2.0",
     "jsonwebtoken": "^8.3.0",
     "register-service-worker": "^1.0.0",
