@@ -1,31 +1,44 @@
 import anime from 'animejs';
 
+const pageEnterEffectFunc = ($el, cb) => {
+  const title = $el.querySelector('.page h1');
+  const content = $el.querySelector('.page .page__content');
+
+  if (title && content) {
+    anime
+      .timeline()
+      .add({
+        targets: title,
+        translateX: ['10rem', 0],
+        opacity: [0.3, 1],
+        duration: 300,
+        easing: 'easeOutQuad',
+        complete() {
+          title.classList.add('shown');
+        },
+      })
+      .add({
+        targets: content,
+        translateY: ['10rem', 0],
+        opacity: [0, 1],
+        duration: 300,
+        easing: 'easeOutQuad',
+        complete() {
+          if (typeof cb === 'function') {
+            cb();
+          }
+        },
+      });
+  }
+};
+
 export const pageEnterEffect = {
   mounted() {
-    const title = this.$el.querySelector('.page h1');
-    const content = this.$el.querySelector('.page .page__content');
+    pageEnterEffectFunc(this.$el);
+  },
 
-    if (title && content) {
-      anime
-        .timeline()
-        .add({
-          targets: title,
-          translateX: ['10rem', 0],
-          opacity: [0.3, 1],
-          duration: 300,
-          easing: 'easeOutQuad',
-          complete() {
-            title.classList.add('shown');
-          },
-        })
-        .add({
-          targets: content,
-          translateY: ['10rem', 0],
-          opacity: [0, 1],
-          duration: 300,
-          easing: 'easeOutQuad',
-        });
-    }
+  beforeRouteUpdate(to, from, next) {
+    pageEnterEffectFunc(this.$el, next);
   },
 };
 

@@ -20,10 +20,10 @@
 
 <script>
 import PageLayout from '@/components/PageLayout';
-import { pageEnterEffect } from '@/effects';
+import { pageEnterEffect, pageLeaveEffect } from '@/effects';
 
 export default {
-  mixins: [pageEnterEffect],
+  mixins: [pageEnterEffect, pageLeaveEffect],
 
   components: {
     PageLayout,
