@@ -1,5 +1,6 @@
 export default {
   plugins: [
+    '@uvue/core/plugins/middlewares',
     '@uvue/core/plugins/asyncData',
     [
       '@uvue/core/plugins/vuex',
@@ -8,7 +9,9 @@ export default {
         fetch: true,
       },
     ],
-    '@uvue/core/plugins/middlewares',
     '@uvue/core/plugins/errorHandler',
+    '@/plugins/errorClear',
+    '@/plugins/httpClient',
+    '@/plugins/navLoader',
   ],
 };
