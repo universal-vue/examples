@@ -5,6 +5,7 @@ export default {
       '@uvue/core/plugins/vuex',
       {
         onHttpRequest: true,
+        fetch: true,
       },
     ],
     '@uvue/core/plugins/middlewares',

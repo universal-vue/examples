@@ -1,0 +1,84 @@
+<template>
+  <header class="main-menu">
+    <ul>
+      <li><router-link to="/" exact> Home </router-link></li>
+      <li><router-link to="/async-data"> Async Data </router-link></li>
+      <li><router-link to="/vuex"> Vuex </router-link></li>
+      <li><router-link to="/not-found"> Not found </router-link></li>
+      <li><router-link to="/server-error"> Server error </router-link></li>
+      <li><router-link to="/error"> Error </router-link></li>
+      <li><router-link to="/private"> Private </router-link></li>
+    </ul>
+  </header>
+</template>
+
+<style lang="scss">
+body {
+  padding-top: 12rem !important;
+}
+
+.main-menu {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 11rem;
+
+  background: #fff;
+  padding: 3rem;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+
+  ul {
+    list-style: none;
+    list-style-image: none;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+
+    li {
+      list-style: none;
+      list-style-image: none;
+      padding: 0;
+      margin: 0;
+
+      a {
+        font-size: 1.8rem;
+        color: #999;
+        text-decoration: none;
+
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        margin: 0.5rem;
+
+        transition: color 0.2s ease-out;
+
+        &::after {
+          content: '';
+          display: block;
+          height: 2px;
+          background: #00ab6c;
+
+          transform: scaleX(0);
+          transform-origin: 0 100%;
+
+          transition: transform 0.2s ease-out;
+        }
+
+        &:hover,
+        a:focus,
+        &:active,
+        &.router-link-exact-active {
+          color: #444;
+
+          &::after {
+            transform: scaleX(1);
+          }
+        }
+      }
+    }
+  }
+}
+</style>

@@ -1,29 +1,58 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
+    <MainMenu />
+    <router-view v-if="!$errorHandler.error" />
+    <ErrorPage v-else />
   </div>
 </template>
 
+<script>
+import MainMenu from './components/MainMenu.vue';
+import ErrorPage from './components/ErrorPage.vue';
+
+export default {
+  components: {
+    MainMenu,
+    ErrorPage,
+  },
+
+  head: {
+    title: 'UVue',
+  },
+};
+</script>
+
 <style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,700');
+
+html {
+  font-size: 62.5%;
 }
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #fcfcfc;
+
+  font-size: 1.6rem;
+  font-family: 'Nunito', sans-serif;
+
+  color: #666;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 4.8rem;
+  font-weight: 300;
+  margin: 0;
+}
+
+h2 {
+  font-size: 2.4rem;
+  font-weight: 300;
+  margin: 0;
 }
 </style>
