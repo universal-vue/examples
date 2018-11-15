@@ -18,6 +18,19 @@ const getToken = req => {
   return authorization ? authorization.replace(/^Bearer\s/, '') : null;
 };
 
+// Generate fake data
+const generateRows = count => {
+  const rows = [];
+  for (let i = 0; i < count; i++) {
+    rows.push({
+      title: faker.lorem.sentence(),
+      text: faker.lorem.paragraph(),
+      picture: `https://placeimg.com/256/192/tech?r=${Math.random()}`,
+    });
+  }
+  return rows;
+};
+
 /**
  * Login route
  */
@@ -30,6 +43,10 @@ router.post('/login', (req, res) => {
 
   return json(res, {
     token: jwt.sign({ username }, jwtSecret),
+    user: {
+      username,
+      logged: true,
+    },
   });
 });
 
@@ -60,16 +77,7 @@ router.get('/profile', (req, res) => {
  * Data route
  */
 router.get('/public', async (req, res) => {
-  const rows = [];
-  for (let i = 0; i < 3; i++) {
-    rows.push({
-      title: faker.lorem.sentence(),
-      text: faker.lorem.paragraphs(),
-      picture: faker.image.technics(),
-    });
-  }
-
-  return json(res, rows);
+  return json(res, generateRows(3));
 });
 
 /**
@@ -92,16 +100,7 @@ router.get('/private', (req, res) => {
     return json(res, { error: 'Bad token' }, 403);
   }
 
-  const rows = [];
-  for (let i = 0; i < 3; i++) {
-    rows.push({
-      title: faker.lorem.sentence(),
-      text: faker.lorem.paragraphs(),
-      picture: faker.image.technics(),
-    });
-  }
-
-  return json(res, rows);
+  return json(res, generateRows(3));
 });
 
 export default router;

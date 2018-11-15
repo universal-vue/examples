@@ -13,9 +13,9 @@ export default {
   },
 
   middlewares: [
-    ({ res }) => {
+    ({ ssr }) => {
       if (process.server) {
-        res.statusCode = 404;
+        ssr.statusCode = 404;
       }
     },
   ],

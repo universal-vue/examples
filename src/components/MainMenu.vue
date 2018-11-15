@@ -1,16 +1,44 @@
 <template>
   <header class="main-menu">
     <ul>
-      <li><router-link to="/" exact> Home </router-link></li>
+      <li>
+        <router-link
+          :class="{
+            'logo-hover': $route.path != '/',
+          }"
+          to="/"
+          exact
+        >
+          <template v-if="$route.path == '/'">
+            Home
+          </template>
+          <template v-else>
+            <img alt="UVue" src="../assets/logo.png" />
+          </template>
+        </router-link>
+      </li>
       <li><router-link to="/async-data"> Async Data </router-link></li>
       <li><router-link to="/vuex"> Vuex </router-link></li>
       <li><router-link to="/not-found"> Not found </router-link></li>
       <li><router-link to="/server-error"> Server error </router-link></li>
       <li><router-link to="/error"> Error </router-link></li>
       <li><router-link to="/private"> Private </router-link></li>
+      <li>
+        <router-link to="/profile"> {{ isLogged ? 'My profile' : 'Login' }} </router-link>
+      </li>
     </ul>
   </header>
 </template>
+
+<script>
+export default {
+  computed: {
+    isLogged() {
+      return this.$store.state.user.logged;
+    },
+  },
+};
+</script>
 
 <style lang="scss">
 body {

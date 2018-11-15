@@ -36,6 +36,16 @@ export default () => {
         component: () => import('./views/Error.vue'),
       },
       {
+        path: '/private',
+        name: 'private',
+        component: () => import('./views/Private.vue'),
+      },
+      {
+        path: '/profile',
+        name: 'profile',
+        component: () => import('./views/Profile.vue'),
+      },
+      {
         path: '*',
         name: 'not-found',
         component: NotFound,
