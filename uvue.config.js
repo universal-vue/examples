@@ -13,5 +13,6 @@ export default {
     '@/plugins/errorClear',
     '@/plugins/httpClient',
     '@/plugins/navLoader',
+    '@/plugins/spaLoader',
   ],
 };

@@ -12,4 +12,5 @@ export default {
     '@uvue/server/plugins/modernBuild',
   ],
   watch: ['src/server/**/*.js'],
+  spaPaths: ['/spa'],
 };

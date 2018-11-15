@@ -1,0 +1,47 @@
+<div class="spa-loading loading-spinner"></div>
+
+<style>
+  .loading-spinner {
+    animation-play-state: running;
+    opacity: 1;
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+  }
+
+  @keyframes spinner {
+    0% {
+      transform: translate3d(-50%, -50%, 0) rotate(0deg);
+    }
+    100% {
+      transform: translate3d(-50%, -50%, 0) rotate(360deg);
+    }
+  }
+
+  .loading-spinner.-paused {
+    animation-play-state: paused;
+    opacity: 0.2;
+    transition: opacity linear 0.1s;
+  }
+
+  .loading-spinner::before {
+    animation: 1.5s linear infinite spinner;
+    animation-play-state: inherit;
+    border: solid 3px #dedede;
+    border-bottom-color: #00ab6c;
+    border-radius: 50%;
+    content: '';
+    height: 40px;
+    left: 50%;
+    opacity: inherit;
+    position: absolute;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    width: 40px;
+    will-change: transform;
+  }
+</style>

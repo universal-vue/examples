@@ -46,6 +46,11 @@ export default () => {
         component: () => import('./views/Profile.vue'),
       },
       {
+        path: '/spa',
+        name: 'spa',
+        component: () => import('./views/SpaPage.vue'),
+      },
+      {
         path: '*',
         name: 'not-found',
         component: NotFound,

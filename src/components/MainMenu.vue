@@ -17,8 +17,9 @@
           </template>
         </router-link>
       </li>
-      <li><router-link to="/async-data"> Async Data </router-link></li>
+      <li><router-link to="/async-data"> AsyncData </router-link></li>
       <li><router-link to="/vuex"> Vuex </router-link></li>
+      <li><router-link to="/spa"> SPA page </router-link></li>
       <li><router-link to="/not-found"> Not found </router-link></li>
       <li><router-link to="/server-error"> Server error </router-link></li>
       <li><router-link to="/error"> Error </router-link></li>
