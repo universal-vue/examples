@@ -29,6 +29,11 @@ export default {
     margin-bottom: 4rem;
     display: flex;
 
+    .picture {
+      min-height: 19.2rem;
+      min-width: 28.6rem;
+    }
+
     img {
       max-width: 25.6rem;
       margin-right: 3rem;

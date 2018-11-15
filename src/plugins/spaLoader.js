@@ -1,7 +1,10 @@
 export default {
   ready() {
     if (process.client) {
-      document.querySelector('.spa-loading').remove();
+      const loader = document.querySelector('.spa-loading');
+      if (loader) {
+        loader.remove();
+      }
     }
   },
 };
