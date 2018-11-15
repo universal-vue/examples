@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="flex">
-      <div><img alt="UVue" src="../assets/logo.png" /></div>
+      <div class="logo"><img alt="UVue" src="../assets/logo.png" /></div>
       <div class="titles">
         <h1>UVue</h1>
         <h2>Create Vue universal applications with ease</h2>
@@ -25,6 +25,11 @@
     </div>
   </div>
 </template>
+
+<script>
+import { homeEffects } from '@/effects';
+export default homeEffects;
+</script>
 
 <style lang="scss">
 .home {

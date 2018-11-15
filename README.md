@@ -1,34 +1,10 @@
-# examples
+# UVue examples
 
-## Project setup
-```
-yarn install
-```
+Simple repository to show some features of UVue!
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+## Getting started
 
-### Compiles and minifies for production
+```bash
+npm install
+npm run ssr:serve
 ```
-yarn run build
-```
-
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Run your end-to-end tests
-```
-yarn run test:e2e
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

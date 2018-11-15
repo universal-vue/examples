@@ -9,8 +9,11 @@
 <script>
 import PageLayout from '@/components/PageLayout';
 import RowsList from '@/components/RowsList';
+import { pageEnterEffect, pageLeaveEffect } from '@/effects';
 
 export default {
+  mixins: [pageEnterEffect, pageLeaveEffect],
+
   components: {
     PageLayout,
     RowsList,

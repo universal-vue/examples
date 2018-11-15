@@ -6,38 +6,12 @@
 </template>
 
 <script>
-import anime from 'animejs';
-
 export default {
   props: {
     title: {
       type: String,
       default: '',
     },
-  },
-
-  mounted() {
-    const title = this.$el.querySelector('h1');
-    const content = this.$el.querySelector('.page__content');
-
-    const tl = anime.timeline();
-
-    tl.add({
-      targets: title,
-      translateX: ['10rem', 0],
-      opacity: [0.3, 1],
-      duration: 300,
-      easing: 'easeOutQuad',
-      complete() {
-        title.classList.add('shown');
-      },
-    }).add({
-      targets: content,
-      translateY: ['10rem', 0],
-      opacity: [0, 1],
-      duration: 300,
-      easing: 'easeOutQuad',
-    });
   },
 };
 </script>

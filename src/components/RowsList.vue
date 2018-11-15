@@ -26,17 +26,19 @@ export default {
   margin-top: 6rem;
 
   .item {
-    margin-bottom: 4rem;
+    padding-bottom: 4rem;
     display: flex;
 
     .picture {
-      min-height: 19.2rem;
-      min-width: 28.6rem;
+      height: 19.2rem;
+      min-width: 25.6rem;
+      background: #ccc;
+      margin-right: 3rem;
     }
 
     img {
       max-width: 25.6rem;
-      margin-right: 3rem;
+      margin: 0;
     }
 
     h2 {

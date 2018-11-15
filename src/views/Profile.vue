@@ -1,7 +1,7 @@
 <template>
   <PageLayout :title="title">
     <form v-if="!user.logged" @submit.prevent="onSubmit">
-      <div v-if="redirected" class="notif info">You have been redirect by a middleware !</div>
+      <div v-if="redirected" class="notif info">You have been redirected by a middleware !</div>
       <div v-if="error" class="notif error">{{ error }}</div>
 
       <div class="txtcenter">
@@ -20,8 +20,11 @@
 
 <script>
 import PageLayout from '@/components/PageLayout';
+import { pageEnterEffect, pageLeaveEffect } from '@/effects';
 
 export default {
+  mixins: [pageEnterEffect, pageLeaveEffect],
+
   components: {
     PageLayout,
   },
