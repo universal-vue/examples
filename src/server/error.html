@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Server error!</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Nunito:300');
+
+      html {
+        font-size: 62.5%;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        background: #fcfcfc;
+
+        font-size: 1.6rem;
+        font-family: 'Nunito', sans-serif;
+
+        color: #666;
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 4.8rem;
+        font-weight: 300;
+        margin: 0;
+        text-align: center;
+
+        padding-top: 10rem;
+      }
+
+      h2 {
+        font-size: 2.4rem;
+        font-weight: 300;
+        margin: 0;
+        margin-bottom: 5rem;
+        text-align: center;
+        color: #999;
+      }
+
+      .btn {
+        display: inline-block;
+        text-decoration: none;
+
+        background: #00ab6c;
+        color: #fff;
+        padding: 1rem 2rem;
+        margin: 1rem;
+        border-radius: 0.7rem;
+
+        border: 0;
+        cursor: pointer;
+
+        transition: background-color 0.2s ease-in-out;
+        transition-property: background-color, border-color;
+      }
+
+      .btn:hover,
+      .btn:focus,
+      .btn:active {
+        outline: none;
+      }
+
+      pre {
+        text-align: left;
+        max-width: 60rem;
+        margin: auto;
+        margin-top: 10rem;
+        overflow: auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Server error!</h1>
+    <h2>Something go wrong here</h2>
+    <a class="btn" href="/"> Back to home </a>
+
+    <pre>
+      {{ error }}
+    </pre>
+  </body>
+</html>
