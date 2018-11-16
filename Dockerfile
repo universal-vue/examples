@@ -12,15 +12,15 @@ COPY . /home/node/app
 
 RUN yarn ssr:build && \
   yarn --production && \
-  yarn cache clean && \
-  rm -rf /home/node/app/src && \
-  rm -rf /home/node/app/public
+  yarn add core-js && \
+  yarn cache clean
 
 FROM node:10-alpine
 
 ENV NODE_ENV production
 ENV HOST 0.0.0.0
 ENV PORT 8080
+EXPOSE 8080
 
 COPY --from=builder /home/node/app /home/node/app
 
