@@ -51,7 +51,7 @@ router.post('/login', (req, res) => {
 });
 
 /**
- * Return current connected profile
+ * Return current logged profile
  */
 router.get('/profile', (req, res) => {
   const token = getToken(req);
@@ -74,14 +74,14 @@ router.get('/profile', (req, res) => {
 });
 
 /**
- * Data route
+ * Data route: return public data
  */
 router.get('/public', async (req, res) => {
   return json(res, generateRows(3));
 });
 
 /**
- * Private data
+ * Private data: return restricted to logged users data
  */
 router.get('/private', (req, res) => {
   const token = getToken(req);

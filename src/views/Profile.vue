@@ -1,5 +1,6 @@
 <template>
   <PageLayout :title="title">
+    <!-- If user is not logged: display a login form -->
     <form v-if="!user.logged" @submit.prevent="onSubmit">
       <div v-if="redirected" class="notif info">You have been redirected by a middleware !</div>
       <div v-if="error" class="notif error">{{ error }}</div>
@@ -10,6 +11,7 @@
         <button class="btn" type="submit">Login</button>
       </div>
     </form>
+    <!-- Otherwise: display a simple welcome page with some links -->
     <div v-else>
       <p>You are now logged!</p>
       <router-link class="btn" to="/private">Go to private page</router-link>
@@ -20,10 +22,10 @@
 
 <script>
 import PageLayout from '@/components/PageLayout';
-import { pageEnterEffect, pageLeaveEffect } from '@/effects';
+import { pageEnterEffect } from '@/effects';
 
 export default {
-  mixins: [pageEnterEffect, pageLeaveEffect],
+  mixins: [pageEnterEffect],
 
   components: {
     PageLayout,

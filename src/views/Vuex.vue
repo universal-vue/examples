@@ -25,6 +25,10 @@ export default {
     },
   },
 
+  /**
+   * This method is similar to asyncData() but cannot inject data to current
+   * component, so we use Vuex to store and display data on this page.
+   */
   async fetch({ store }) {
     await store.dispatch('fetchRows');
   },

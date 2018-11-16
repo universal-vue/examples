@@ -50,6 +50,10 @@ export default () => {
         name: 'spa',
         component: () => import('./views/SpaPage.vue'),
       },
+      /**
+       * 404 - Not found error page
+       * Need to be the last defined route!
+       */
       {
         path: '*',
         name: 'not-found',

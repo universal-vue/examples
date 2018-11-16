@@ -20,6 +20,10 @@ export default {
   },
 
   created() {
+    /**
+     * This will cause a server side error because `window` is
+     * not defined in NodeJS process
+     */
     window.console.log('Cannot do that on server!');
   },
 };

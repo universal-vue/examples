@@ -1,6 +1,8 @@
 <template>
   <PageLayout title="SPA page">
-    <p>This page will show a loader during a full page refresh</p>
+    <p>
+      This page will show a loader during a full page refresh and is not rendered on server side!
+    </p>
   </PageLayout>
 </template>
 

@@ -19,6 +19,10 @@ export default {
     RowsList,
   },
 
+  /**
+   * Simple middleware to check user is already logged or not
+   * If not: redirect him to login page
+   */
   middlewares: [
     async ({ store, redirect }) => {
       if (!store.state.user.logged) {

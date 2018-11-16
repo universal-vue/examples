@@ -1,3 +1,6 @@
+<!--
+  This component is responsible of displaying a nice error page in case the errorHandler plugin have caught an error
+-->
 <template>
   <PageLayout title="Error!">
     <p>

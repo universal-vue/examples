@@ -1,3 +1,7 @@
+/**
+ * This server plugin will display a nice error page if an error
+ * is catch on server-side. In this case we cannot use Vue rendering.
+ */
 import path from 'path';
 import fs from 'fs';
 

@@ -7,6 +7,9 @@ import VueMeta from 'vue-meta';
 
 Vue.config.productionTip = false;
 
+/**
+ * Vue meta plugin installation
+ */
 Vue.use(VueMeta, {
   keyName: 'head',
 });
