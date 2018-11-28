@@ -1,0 +1,1 @@
+require('@uvue/server/start');

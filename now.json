@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "name": "uvue-examples",
+  "builds": [
+    {
+      "src": "now.js",
+      "use": "@now/node-server",
+      "config": { "bundle": false, "maxLambdaSize": "50mb" }
+    }
+  ],
+  "routes": [{ "src": "/.*", "dest": "now.js" }]
+}
