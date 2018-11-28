@@ -2,12 +2,10 @@
  * Server plugin to install middlewares on server to create
  * and API
  */
-import bodyParser from 'body-parser';
-import api from './api';
+import fastifyApi from './fastifyApi';
 
 export default {
   install(app) {
-    app.use('/api', bodyParser.json());
-    app.use('/api', api);
+    fastifyApi(app);
   },
 };

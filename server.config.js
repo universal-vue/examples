@@ -1,6 +1,10 @@
 import path from 'path';
+import { FastifyAdapter } from '@uvue/server';
 
 export default {
+  // Use custom adapter for server
+  adapter: FastifyAdapter,
+
   // Server plugins installed
   plugins: [
     // Server error page
