@@ -27,6 +27,7 @@ export default {
     '@uvue/server/plugins/gzip',
     // API
     './src/server/apiPlugin',
+    './src/server/errors',
   ],
   // Watch for changes in these files to automatically reboot server
   watch: ['src/server/**/*.js'],
