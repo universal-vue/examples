@@ -13,7 +13,7 @@ export default {
     // Create axios client
     const httpClient = axios.create({
       // Change API url: depends on server side or client side
-      baseURL: process.client ? '/' : process.env.API_URL || 'http://localhost:8080/',
+      baseURL: process.client ? '/' : `http://localhost:${process.env.PORT || 8080}/`,
     });
 
     // Use request interceptors
