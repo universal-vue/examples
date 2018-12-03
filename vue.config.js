@@ -15,7 +15,7 @@ module.exports = {
 
     chain.plugin('DefinePluginHeroku').use(webpack.DefinePlugin, [
       {
-        'process.env.PORT': process.env.PORT || 8080,
+        'process.env.API_URL': process.env.API_URL,
       },
     ]);
   },

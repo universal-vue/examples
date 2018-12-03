@@ -10,10 +10,12 @@ export default {
   beforeCreate(context) {
     const { error, req } = context;
 
+    const apiUrl = process.env.API_URL || 'http://localhost:8080';
+
     // Create axios client
     const httpClient = axios.create({
       // Change API url: depends on server side or client side
-      baseURL: process.client ? '/' : `http://localhost:${process.env.PORT || 8080}/`,
+      baseURL: process.client ? '/' : apiUrl,
     });
 
     // Use request interceptors
