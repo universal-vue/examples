@@ -1,1 +1,1 @@
-web: npx uvs
+web: node node_modules/@uvue/server/start.js
