@@ -12,7 +12,8 @@
     "ssr:start": "vue-cli-service ssr:start",
     "ssr:static": "vue-cli-service ssr:static",
     "test:e2e": "vue-cli-service test:e2e",
-    "now-build": "./build.sh"
+    "now-build": "vue-cli-service ssr:build && npm prune --production",
+    "heroku-postbuild": "vue-cli-service ssr:build"
   },
   "dependencies": {
     "@uvue/core": "^0.1.0-alpha",
