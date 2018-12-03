@@ -1,3 +1,5 @@
+const webpack = require('webpack');
+
 module.exports = {
   chainWebpack(chain) {
     chain.module
@@ -10,5 +12,11 @@ module.exports = {
       .options({
         minimize: true,
       });
+
+    chain.plugin('DefinePluginHeroku').use(webpack.DefinePlugin, [
+      {
+        'process.env.PORT': process.env.PORT || 8080,
+      },
+    ]);
   },
 };

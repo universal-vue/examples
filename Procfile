@@ -1,1 +1,1 @@
-web: node node_modules/@uvue/server/start.js
+web: npm run ssr:start

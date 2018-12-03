@@ -10,8 +10,6 @@ export default {
   beforeCreate(context) {
     const { error, req } = context;
 
-    console.log(process.env);
-
     // Create axios client
     const httpClient = axios.create({
       // Change API url: depends on server side or client side
