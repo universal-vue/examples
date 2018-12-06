@@ -22,7 +22,14 @@ export default {
     titleTemplate(title) {
       return title ? `${title} | UVue` : 'UVue';
     },
+    htmlAttrs: {
+      lang: 'en',
+    },
     link: [{ rel: 'manifest', href: '/manifest.json' }],
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+    ],
   },
 };
 </script>
