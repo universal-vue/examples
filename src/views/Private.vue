@@ -31,8 +31,8 @@ export default {
     },
   ],
 
-  async asyncData({ http }) {
-    const { data: rows } = await http.get('/api/private');
+  async asyncData({ $http }) {
+    const { data: rows } = await $http.get('/api/private');
     return {
       rows,
     };

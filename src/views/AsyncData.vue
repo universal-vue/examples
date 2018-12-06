@@ -23,8 +23,8 @@ export default {
    * Fetch data from API: with this method we can send directly fetched
    * data to current component.
    */
-  async asyncData({ http }) {
-    const { data: rows } = await http.get('/api/public');
+  async asyncData({ $http }) {
+    const { data: rows } = await $http.get('/api/public');
     return {
       rows,
     };
