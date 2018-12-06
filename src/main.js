@@ -2,8 +2,8 @@ import Vue from 'vue';
 import App from './App.vue';
 import createRouter from './router';
 import createStore from './store';
-import './registerServiceWorker';
 import VueMeta from 'vue-meta';
+import './registerServiceWorker';
 
 Vue.config.productionTip = false;
 

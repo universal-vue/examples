@@ -23,13 +23,13 @@ export default () => {
     actions: {
       // For Vuex page
       async fetchRows({ commit }) {
-        const { data } = await Vue.http.get('/api/public');
+        const { data } = await this.$http.get('/api/public');
         commit('setRows', data);
       },
 
       // Action to login and store user's data in Vuex store
       async login({ commit }, username) {
-        const { data } = await Vue.http.post('/api/login', {
+        const { data } = await this.$http.post('/api/login', {
           username: username,
         });
 

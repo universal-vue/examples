@@ -3,11 +3,10 @@
  * It handles tokens too to acess to private routes on API.
  */
 
-import Vue from 'vue';
 import axios from 'axios';
 
 export default {
-  beforeCreate(context) {
+  beforeCreate(context, inject) {
     const { error, req } = context;
 
     const apiUrl = process.env.API_URL || 'http://localhost:8080';
@@ -50,14 +49,7 @@ export default {
       },
     );
 
-    // Install a shortcut to http client in context
-    context.http = httpClient;
-
-    // With this we can call http client everywhere in components or Vuex actions
-    Vue.use({
-      install(Vue) {
-        Vue.http = Vue.prototype.$http = httpClient;
-      },
-    });
+    // Inject httpClient eveywhere
+    inject('http', httpClient);
   },
 };
