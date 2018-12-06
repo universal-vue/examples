@@ -13,8 +13,9 @@ if (process.env.NODE_ENV === 'production' && process.client) {
     cached() {
       console.log('Content has been cached for offline use.');
     },
-    updated() {
-      console.log('New content is available; please refresh.');
+    updated(registration) {
+      let worker = registration.waiting;
+      worker.postMessage({ action: 'skipWaiting' });
     },
     offline() {
       console.log('No internet connection found. App is running in offline mode.');
@@ -22,5 +23,17 @@ if (process.env.NODE_ENV === 'production' && process.client) {
     error(error) {
       console.error('Error during service worker registration:', error);
     },
+  });
+
+  self.addEventListener('message', e => {
+    if (e.data.action == 'skipWaiting') {
+      self.skipWaiting();
+
+      /*
+      Two possible strategies here:
+      - Auto refresh with `window.location.reload(true)` (Bad)
+      - Display a popup to user with a button to refresh current page (Good)
+      */
+    }
   });
 }

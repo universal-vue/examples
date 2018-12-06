@@ -1,6 +1,36 @@
 const webpack = require('webpack');
 
 module.exports = {
+  pwa: {
+    name: 'UVue',
+    themeColor: '#ffffff',
+    msTileColor: '#333333',
+    workboxOptions: {
+      templatedUrls: {
+        '/': '/',
+      },
+      runtimeCaching: [
+        // Cache Google fonts
+        {
+          urlPattern: /https:\/\/fonts.googleapis.com\/(.*)/,
+          handler: 'cacheFirst',
+          options: {
+            cacheName: 'googleapis',
+            cacheableResponse: { statuses: [0, 200] },
+          },
+        },
+        {
+          urlPattern: /https:\/\/fonts.gstatic.com\/(.*)/,
+          handler: 'cacheFirst',
+          options: {
+            cacheName: 'googleapis',
+            cacheableResponse: { statuses: [0, 200] },
+          },
+        },
+      ],
+    },
+  },
+
   chainWebpack(chain) {
     chain.module
       .rule('html')

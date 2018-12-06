@@ -24,9 +24,21 @@ export default {
       },
     ],
     // Serve static files
-    '@uvue/server/plugins/static',
-    // Compress responses
-    '@uvue/server/plugins/gzip',
+    [
+      '@uvue/server/plugins/static',
+      {
+        directory: 'dist',
+        options: {
+          immutable: true,
+          maxAge: '1y',
+          setHeaders(res, path) {
+            if (/service-worker\.js/.test(path)) {
+              res.setHeader('Cache-Control', 'public, max-age=0');
+            }
+          },
+        },
+      },
+    ],
     // API
     './src/server/apiPlugin',
     './src/server/errors',

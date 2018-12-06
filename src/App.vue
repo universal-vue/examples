@@ -19,7 +19,10 @@ export default {
   },
 
   head: {
-    title: 'UVue',
+    titleTemplate(title) {
+      return title ? `${title} | UVue` : 'UVue';
+    },
+    link: [{ rel: 'manifest', href: '/manifest.json' }],
   },
 };
 </script>
