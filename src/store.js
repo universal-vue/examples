@@ -58,8 +58,8 @@ export default () => {
        * If user come to this application we check is already logged.
        * Result will be stored in Vuex to be used anywhere in Vue application.
        */
-      async onHttpRequest({ commit }, { http }) {
-        const { data } = await http.get('/api/profile');
+      async onHttpRequest({ commit }, { $http }) {
+        const { data } = await $http.get('/api/profile');
         commit('setUser', data);
       },
     },

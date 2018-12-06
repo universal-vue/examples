@@ -7,6 +7,8 @@ export default {
 
   // Server plugins installed
   plugins: [
+    // Compress responses
+    '@uvue/server/plugins/gzip',
     // Server error page
     [
       '@uvue/server/plugins/serverError',
