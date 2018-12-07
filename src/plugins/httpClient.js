@@ -51,5 +51,10 @@ export default {
 
     // Inject httpClient eveywhere
     inject('http', httpClient);
+
+    // You can use it everywhere in your app:
+    // - In UVue context: `context.$http.get(...)`
+    // - In your components: `this.$http.get(...)`
+    // - In your store actions: `this.$http.get(...)`
   },
 };

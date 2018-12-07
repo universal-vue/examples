@@ -12,15 +12,7 @@ module.exports = {
       runtimeCaching: [
         // Cache Google fonts
         {
-          urlPattern: /https:\/\/fonts.googleapis.com\/(.*)/,
-          handler: 'cacheFirst',
-          options: {
-            cacheName: 'googleapis',
-            cacheableResponse: { statuses: [0, 200] },
-          },
-        },
-        {
-          urlPattern: /https:\/\/fonts.gstatic.com\/(.*)/,
+          urlPattern: /https:\/\/fonts.(googleapis|gstatic).com\/(.*)/,
           handler: 'cacheFirst',
           options: {
             cacheName: 'googleapis',
