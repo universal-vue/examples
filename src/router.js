@@ -39,6 +39,19 @@ export default () => {
         path: '/private',
         name: 'private',
         component: () => import('./views/Private.vue'),
+        meta: {
+          middlewares: [
+            /**
+             * Simple middleware to check user is already logged or not
+             * If not: redirect him to login page
+             */
+            async ({ store, redirect }) => {
+              if (!store.state.user.logged) {
+                redirect('/profile?from=/private');
+              }
+            },
+          ],
+        },
       },
       {
         path: '/profile',

@@ -19,18 +19,6 @@ export default {
     RowsList,
   },
 
-  /**
-   * Simple middleware to check user is already logged or not
-   * If not: redirect him to login page
-   */
-  middlewares: [
-    async ({ store, redirect }) => {
-      if (!store.state.user.logged) {
-        redirect('/profile?from=/private');
-      }
-    },
-  ],
-
   async asyncData({ $http }) {
     const { data: rows } = await $http.get('/api/private');
     return {
