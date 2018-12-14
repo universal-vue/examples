@@ -41,8 +41,14 @@ export default {
     }
   },
 
+  catchError({ app }) {
+    if (process.client) {
+      app.$Progress.fail();
+    }
+  },
+
   // On route error: fail
-  routeError(error, { app }) {
+  routeError({ app }) {
     if (process.client) {
       app.$Progress.fail();
     }
