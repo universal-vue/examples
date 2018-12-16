@@ -24,24 +24,9 @@ export default {
       },
     ],
     // Serve static files
-    [
-      '@uvue/server/plugins/static',
-      {
-        directory: 'dist',
-        options: {
-          immutable: true,
-          maxAge: '1y',
-          setHeaders(res, path) {
-            if (/service-worker\.js/.test(path)) {
-              res.setHeader('Cache-Control', 'public, max-age=0');
-            }
-          },
-        },
-      },
-    ],
+    '@uvue/server/plugins/static',
     // API
     './src/server/apiPlugin',
-    './src/server/errors',
   ],
   // Watch for changes in these files to automatically reboot server
   watch: ['src/server/**/*.js'],
