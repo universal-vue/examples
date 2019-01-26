@@ -2,7 +2,25 @@ export default {
   // UVue plugins
   plugins: [
     // Add middlewares system
-    '@uvue/core/plugins/middlewares',
+    [
+      '@uvue/core/plugins/middlewares',
+      {
+        middlewares: [
+          /**
+           * If user come to this application we check is already logged.
+           * Result will be stored in Vuex to be used anywhere in Vue application.
+           */
+          async ({ store, $http }) => {
+            try {
+              const { data } = await $http.get('/api/profile');
+              store.commit('setUser', data);
+            } catch (err) {
+              // Nothing here...
+            }
+          },
+        ],
+      },
+    ],
     // Add asyncData() process to page components
     '@uvue/core/plugins/asyncData',
     // Vuex plugin
