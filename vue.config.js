@@ -6,6 +6,8 @@ module.exports = {
     themeColor: '#ffffff',
     msTileColor: '#333333',
     workboxOptions: {
+      skipWaiting: true,
+      navigateFallback: '/',
       templatedUrls: {
         '/': '/',
       },
