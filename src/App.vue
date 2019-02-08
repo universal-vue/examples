@@ -1,8 +1,14 @@
 <template>
   <div id="app">
-    <NoSSR> <vue-progress-bar></vue-progress-bar> </NoSSR> <MainMenu />
+    <NoSSR> <vue-progress-bar /> </NoSSR>
+    <MainMenu />
     <router-view v-if="!$errorHandler.error" />
     <ErrorPage v-else />
+
+    <div id="update-popup" style="display: none;">
+      <p>There is an update ready !</p>
+      <button class="btn" @click="refresh">Refresh</button>
+    </div>
   </div>
 </template>
 
@@ -30,6 +36,12 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
     ],
+  },
+
+  methods: {
+    refresh() {
+      window.location.reload(true);
+    },
   },
 };
 </script>
@@ -108,6 +120,21 @@ h2 {
 
   &.error {
     background: lighten(#c4382c, 40%);
+  }
+}
+
+#update-popup {
+  position: fixed;
+  z-index: 10000;
+  right: 3rem;
+  bottom: 3rem;
+  padding: 2rem 6rem;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.15);
+
+  p {
+    margin-bottom: 0;
   }
 }
 </style>
