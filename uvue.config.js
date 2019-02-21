@@ -41,5 +41,7 @@ export default {
     '@/plugins/navLoader',
     // Show a loader for SPA pages
     '@/plugins/spaLoader',
+    // Web fonts loader
+    '@/plugins/webFonts',
   ],
 };
