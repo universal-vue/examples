@@ -5,7 +5,7 @@ ENV NODE_ENV production
 RUN mkdir -p /home/node/app
 WORKDIR /home/node/app
 
-COPY --chown=node:node package.json yarn.lock /home/node/app/
+COPY package*.json yarn*.lock /home/node/app/
 RUN chown -R node:node /home/node/
 
 USER node
