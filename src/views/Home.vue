@@ -12,13 +12,28 @@
       Welcome to the UVue demo website! The purpose of this website is to show some features of this
       Vue package. UVue is a Vue CLI plugin to build server side rendered applications easly.
       <div class="links">
-        <a class="btn" href="https://github.com/universal-vue/examples" target="_blank">
+        <a
+          rel="noreferrer noopener"
+          class="btn"
+          href="https://github.com/universal-vue/examples"
+          target="_blank"
+        >
           Source code
         </a>
-        <a class="btn" href="https://universal-vue.github.io/docs" target="_blank">
+        <a
+          rel="noreferrer noopener"
+          class="btn"
+          href="https://universal-vue.github.io/docs"
+          target="_blank"
+        >
           Documentation
         </a>
-        <a class="btn" href="https://github.com/universal-vue/uvue" target="_blank">
+        <a
+          rel="noreferrer noopener"
+          class="btn"
+          href="https://github.com/universal-vue/uvue"
+          target="_blank"
+        >
           Github repo
         </a>
       </div>

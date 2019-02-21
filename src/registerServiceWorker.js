@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 
-import { register, unregister } from 'register-service-worker';
+import { register } from 'register-service-worker';
 
 if (process.env.NODE_ENV === 'production' && process.client) {
   register(`${process.env.BASE_URL}service-worker.js`, {
@@ -24,7 +24,6 @@ if (process.env.NODE_ENV === 'production' && process.client) {
       - Display a popup to user with a button to refresh current page (Good)
       */
 
-      unregister();
       document.querySelector('#update-popup').style.display = 'block';
     },
     offline() {

@@ -7,9 +7,8 @@ module.exports = {
     msTileColor: '#333333',
     workboxOptions: {
       skipWaiting: true,
-      navigateFallback: '/',
       templatedUrls: {
-        '/': '/',
+        '/': '/uvue/spa.html',
       },
       runtimeCaching: [
         // Cache Google fonts
@@ -18,6 +17,15 @@ module.exports = {
           handler: 'cacheFirst',
           options: {
             cacheName: 'googleapis',
+            cacheableResponse: { statuses: [0, 200] },
+          },
+        },
+        // Cache API calls
+        {
+          urlPattern: /\/api\//,
+          handler: 'networkFirst',
+          options: {
+            cacheName: 'api',
             cacheableResponse: { statuses: [0, 200] },
           },
         },

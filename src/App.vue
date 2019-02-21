@@ -35,6 +35,8 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'description', content: 'UVue examples website!' },
+      { name: 'theme-color', content: 'ffffff' },
     ],
   },
 
