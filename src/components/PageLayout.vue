@@ -18,9 +18,10 @@ export default {
 
 <style lang="scss">
 .page {
+  box-sizing: content-box;
   max-width: 65rem;
   margin: auto;
-  padding: 3rem 0;
+  padding: 3rem 6rem;
 
   h1 {
     font-weight: 100;

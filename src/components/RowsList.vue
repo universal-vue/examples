@@ -57,4 +57,18 @@ export default {
     }
   }
 }
+
+@media screen and (max-width: 968px) {
+  .rows-list {
+    .item {
+      display: block;
+
+      .picture {
+        margin-bottom: 2rem;
+        text-align: center;
+        background: transparent;
+      }
+    }
+  }
+}
 </style>

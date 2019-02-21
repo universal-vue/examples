@@ -33,6 +33,7 @@ export default homeEffects;
 
 <style lang="scss">
 .home {
+  height: auto;
   max-width: 70rem;
   margin: 6rem auto;
 
@@ -59,6 +60,36 @@ export default homeEffects;
       padding-top: 6rem;
       display: flex;
       justify-content: center;
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .home {
+    .flex {
+      display: block;
+    }
+
+    .logo {
+      padding: 0 6rem;
+      text-align: center;
+    }
+
+    h1,
+    h2 {
+      padding: 0 6rem;
+      text-align: center;
+    }
+
+    .text-links {
+      .links {
+        display: block;
+
+        a {
+          text-align: center;
+          display: block;
+        }
+      }
     }
   }
 }
