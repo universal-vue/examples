@@ -7,29 +7,35 @@
         </router-link>
       </li>
       <li class="page-link">
-        <router-link to="/async-data" @click.native="onClickLink"> AsyncData </router-link>
+        <router-link to="/async-data" @click.native="onClickLink">
+          <span>AsyncData</span>
+        </router-link>
       </li>
       <li class="page-link">
-        <router-link to="/vuex" @click.native="onClickLink"> Vuex </router-link>
+        <router-link to="/vuex" @click.native="onClickLink"> <span>Vuex</span> </router-link>
       </li>
       <li class="page-link">
-        <router-link to="/spa" @click.native="onClickLink"> SPA page </router-link>
+        <router-link to="/spa" @click.native="onClickLink"> <span>SPA page</span> </router-link>
       </li>
       <li class="page-link">
-        <router-link to="/not-found" @click.native="onClickLink"> Not found </router-link>
+        <router-link to="/not-found" @click.native="onClickLink">
+          <span>Not found</span>
+        </router-link>
       </li>
       <li class="page-link">
-        <router-link to="/server-error" @click.native="onClickLink"> Server error </router-link>
+        <router-link to="/server-error" @click.native="onClickLink">
+          <span>Server error</span>
+        </router-link>
       </li>
       <li class="page-link">
-        <router-link to="/error" @click.native="onClickLink"> Error </router-link>
+        <router-link to="/error" @click.native="onClickLink"> <span>Error</span> </router-link>
       </li>
       <li class="page-link">
-        <router-link to="/private" @click.native="onClickLink"> Private </router-link>
+        <router-link to="/private" @click.native="onClickLink"> <span>Private</span> </router-link>
       </li>
       <li class="page-link">
         <router-link to="/profile" @click.native="onClickLink">
-          {{ isLogged ? 'My profile' : 'Login' }}
+          <span>{{ isLogged ? 'My profile' : 'Login' }}</span>
         </router-link>
       </li>
     </ul>
@@ -114,16 +120,20 @@ body {
         transition: all 0.2s ease-out;
         transition-property: color, opacity;
 
-        &::after {
-          content: '';
-          display: block;
-          height: 2px;
-          background: #00ab6c;
+        span {
+          display: inline-block;
 
-          transform: scaleX(0);
-          transform-origin: 0 100%;
+          &::after {
+            content: '';
+            display: block;
+            height: 2px;
+            background: #00ab6c;
 
-          transition: transform 0.2s ease-out;
+            transform: scaleX(0);
+            transform-origin: 0 100%;
+
+            transition: transform 0.2s ease-out;
+          }
         }
 
         &.logo-hover:hover,
@@ -139,7 +149,7 @@ body {
         &.router-link-active {
           color: #444;
 
-          &::after {
+          span::after {
             transform: scaleX(1);
           }
         }

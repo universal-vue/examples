@@ -36,7 +36,7 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'description', content: 'UVue examples website!' },
-      { name: 'theme-color', content: 'ffffff' },
+      { name: 'theme-color', content: '#ffffff' },
     ],
   },
 
@@ -94,7 +94,7 @@ h2 {
   display: inline-block;
   text-decoration: none;
 
-  background: #00ab6c;
+  background: #38465e;
   color: #fff;
   padding: 1rem 2rem;
   margin: 1rem;
@@ -102,7 +102,7 @@ h2 {
 
   border: 0;
   cursor: pointer;
-  border-bottom: 0.3rem solid darken(#00ab6c, 10%);
+  border-bottom: 0.3rem solid darken(#38465e, 10%);
 
   transition: background-color 0.2s ease-in-out;
   transition-property: background-color, border-color;

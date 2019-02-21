@@ -82,7 +82,7 @@ form {
   }
 
   label {
-    font-weight: bold;
+    font-weight: 700;
     padding: 2rem;
     display: inline-block;
   }

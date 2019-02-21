@@ -58,11 +58,11 @@ export default homeEffects;
 
   h1 {
     margin-top: 4rem;
-    color: #00ab6c;
+    color: darken(#00ab6c, 10%);
   }
 
   h2 {
-    color: #999;
+    color: #444;
     margin-bottom: 4rem;
   }
 
