@@ -97,4 +97,12 @@ export default server => {
 
     return res.send(generateRows(3));
   });
+
+  /**
+   * Sample error
+   */
+  app.get('/api/error', (req, res) => {
+    res.code(400);
+    res.send({ error: 'Error happen!' });
+  });
 };

@@ -1,9 +1,7 @@
 <template>
   <PageLayout title="Server error">
     <p>
-      This page cannot be rendered on server because it uses <code>window</code> object in
-      <code>created()</code> component hook. If you refresh this page you will see a server error
-      page instead.
+      {{ foo }}
     </p>
   </PageLayout>
 </template>
@@ -19,12 +17,10 @@ export default {
     PageLayout,
   },
 
-  created() {
-    /**
-     * This will cause a server side error because `window` is
-     * not defined in NodeJS process
-     */
-    window.console.log('Cannot do that on server!');
+  async asyncData({ $http }) {
+    return {
+      foo: await $http.get('/api/error'),
+    };
   },
 };
 </script>
