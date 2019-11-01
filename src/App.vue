@@ -55,17 +55,12 @@ html {
 
 body {
   margin: 0;
-  overflow-x: hidden;
   background: #fcfcfc;
 
   font-size: 1.6rem;
   font-family: 'Nunito', sans-serif;
 
   color: #666;
-}
-
-#app {
-  overflow-x: hidden;
 }
 
 button,
