@@ -16,8 +16,8 @@
     "heroku-postbuild": "vue-cli-service ssr:build"
   },
   "dependencies": {
-    "@uvue/core": "0.1.0-alpha.17",
-    "@uvue/server": "0.1.0-alpha.17",
+    "@uvue/core": "^0.1.0",
+    "@uvue/server": "^0.1.0",
     "animejs": "^3.0.1",
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
@@ -36,11 +36,11 @@
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
-    "@uvue/vue-cli-plugin-ssr": "0.1.0-alpha.18",
-    "@vue/cli-plugin-babel": "^3.4.1",
-    "@vue/cli-plugin-eslint": "^3.4.1",
-    "@vue/cli-plugin-pwa": "^3.4.1",
-    "@vue/cli-service": "^3.4.1",
+    "@uvue/vue-cli-plugin-ssr": "^0.1.0",
+    "@vue/cli-plugin-babel": "^4.0.0",
+    "@vue/cli-plugin-eslint": "^4.0.0",
+    "@vue/cli-plugin-pwa": "^4.0.0",
+    "@vue/cli-service": "^4.0.0",
     "@vue/eslint-config-prettier": "^4.0.1",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.14.1",
