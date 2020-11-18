@@ -22,7 +22,7 @@
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "faker": "^4.1.0",
-    "fastify": "^1.14.1",
+    "fastify": "^2.15.1",
     "js-cookie": "^2.2.0",
     "jsonwebtoken": "^8.5.0",
     "register-service-worker": "^1.6.2",
