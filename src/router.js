@@ -71,6 +71,19 @@ export default () => {
         path: '*',
         name: 'not-found',
         component: NotFound,
+        meta: {
+          middlewares: [
+            /**
+             * We add a middleware to return a response with 404 status code
+             * on server side.
+             */
+            ({ ssr }) => {
+              if (process.server) {
+                ssr.statusCode = 404;
+              }
+            },
+          ],
+        },
       },
     ],
   });

@@ -14,17 +14,5 @@ export default {
   components: {
     PageLayout,
   },
-
-  /**
-   * We add a middleware to return a response with 404 status code
-   * on server side.
-   */
-  middlewares: [
-    ({ ssr }) => {
-      if (process.server) {
-        ssr.statusCode = 404;
-      }
-    },
-  ],
 };
 </script>
